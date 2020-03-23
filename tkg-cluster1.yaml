@@ -2,6 +2,7 @@ apiVersion: gcm.vmware.com/v1alpha1
 kind: TanzuKubernetesCluster
 metadata:
   name: prod-cluster            # pick a cluster name
+  namespace: <your namespace>   # choose a SV cluster namespace
 spec:
   topology:
     controlPlane:
