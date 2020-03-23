@@ -1,2 +1,2 @@
 # pacific
-YAMLS used for testing/deploying workloads in Project Pacific Beta
+YAMLs used for testing/deploying workloads in Project Pacific Beta
