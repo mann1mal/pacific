@@ -1,0 +1,25 @@
+apiVersion: gcm.vmware.com/v1alpha1
+kind: TanzuKubernetesCluster
+metadata:
+  name: prod-cluster            # pick a cluster name
+  namespace: production         # your namespace here
+spec:
+  topology:
+    controlPlane:
+      count: 1
+      class: best-effort-xsmall # vmclass to be used for master(s)
+      storageClass: wcp-policy  # your storage policy name here
+    workers:
+      count: 2
+      class: best-effort-xsmall # vmclass to be used for workers(s)
+      storageClass: wcp-policy  # your storage policy name here
+  distribution:
+    version: v1.15.5+vmware.1-tkg.1.85123d8
+  settings:
+    network:
+      cni:
+        name: calico
+      services:
+        cidrBlocks: ["198.51.100.0/12"]
+      pods:
+        cidrBlocks: ["192.0.2.0/16"]
