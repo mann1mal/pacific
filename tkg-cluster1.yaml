@@ -1,8 +1,8 @@
-apiVersion: gcm.vmware.com/v1alpha1
+apiVersion: run.tanzu.vmware.com/v1alpha1
 kind: TanzuKubernetesCluster
 metadata:
-  name: prod-cluster            # pick a cluster name
-  namespace: <your namespace>   # choose a SV cluster namespace
+  name: vcpp-demo            # pick a cluster name
+  namespace: vcpp-team   # choose a SV cluster namespace
 spec:
   topology:
     controlPlane:
@@ -10,11 +10,11 @@ spec:
       class: best-effort-xsmall # vmclass to be used for master(s)
       storageClass: wcp-policy  # your storage policy name here
     workers:
-      count: 2
+      count: 1
       class: best-effort-xsmall # vmclass to be used for workers(s)
       storageClass: wcp-policy  # your storage policy name here
   distribution:
-    version: v1.15.5+vmware.1-tkg.1.85123d8
+    version: v1.16.8
   settings:
     network:
       cni:
