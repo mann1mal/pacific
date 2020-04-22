@@ -1,7 +1,7 @@
 apiVersion: run.tanzu.vmware.com/v1alpha1
 kind: TanzuKubernetesCluster
 metadata:
-  name: vcpp-demo            # pick a cluster name
+  name: vcpp-demo-tkg            # pick a cluster name
   namespace: vcpp-team   # choose a SV cluster namespace
 spec:
   topology:
