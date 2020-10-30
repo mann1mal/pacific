@@ -46,7 +46,6 @@ kind: PersistentVolumeClaim
 metadata:
   name: ghost-content
 spec:
-  storageClassName: wcp-policy
   accessModes:
     - ReadWriteOnce
   resources:
